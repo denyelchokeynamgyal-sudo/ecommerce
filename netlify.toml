@@ -1,0 +1,32 @@
+# ============================================================
+#  KITKING — Netlify Configuration
+#  This file configures your deployment on Netlify.
+# ============================================================
+
+[build]
+  publish = "."        # Serve from the root folder
+
+# Security headers — makes your site more trusted by browsers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-XSS-Protection       = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+
+# Cache images and fonts aggressively for speed
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

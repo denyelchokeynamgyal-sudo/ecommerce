@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop All Kits — Bhutan Hype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="shop.css" />
+</head>
+
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5" fill="none" />
+            <path d="M12 2a10 10 0 0 1 6.32 17.45M5.68 4.55A10 10 0 0 1 12 2" stroke="white" stroke-width="1.5"
+              fill="none" />
+          </svg>
+        </div>
+        <span class="logo-name">Bhutan Hype</span>
+      </a>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link active">Shop</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+      <div class="header-right">
+        <button class="cart-btn" id="cart-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="shop-page-header">
+    <div class="shop-page-inner">
+      <div class="section-label">Full Collection</div>
+      <h1 class="shop-page-title">All Kits</h1>
+    </div>
+  </div>
+
+  <!-- SHOP LAYOUT -->
+  <div class="shop-layout">
+
+    <!-- SIDEBAR FILTERS — redesigned dark panel -->
+    <div class="sidebar-mobile-overlay" id="sidebar-overlay"></div>
+    <aside class="shop-sidebar" id="shop-sidebar">
+
+      <!-- Header -->
+      <div class="sidebar-header">
+        <span class="sidebar-title">Filters <span class="filter-count-badge" id="filter-count-badge"></span></span>
+        <button class="sidebar-reset-btn" id="sidebar-reset">Clear all</button>
+      </div>
+
+      <!-- Search -->
+      <div class="sidebar-search-wrap">
+        <svg class="sidebar-search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+        <input type="text" id="search-input" class="search-inp" placeholder="Search name, team, player…"
+          autocomplete="off" />
+        <button class="search-clr" id="search-clr" style="display:none;">✕</button>
+      </div>
+
+      <!-- League -->
+      <div class="filter-block open" id="fb-league">
+        <div class="filter-block-head">
+          <span class="filter-block-name">League</span>
+          <span class="filter-block-arrow">▼</span>
+        </div>
+        <div class="filter-block-body">
+          <div class="filter-radio-list" id="filter-league-list">
+            <label class="fradio">
+              <input type="radio" name="league" value="" checked />
+              <span class="fradio-dot"></span>
+              <span class="fradio-label">All Leagues</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team -->
+      <div class="filter-block" id="fb-team">
+        <div class="filter-block-head">
+          <span class="filter-block-name">Team</span>
+          <span class="filter-block-arrow">▼</span>
+        </div>
+        <div class="filter-block-body">
+          <div class="filter-radio-list" id="filter-team-list">
+            <label class="fradio">
+              <input type="radio" name="team" value="" checked />
+              <span class="fradio-dot"></span>
+              <span class="fradio-label">All Teams</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Size -->
+      <div class="filter-block open" id="fb-size">
+        <div class="filter-block-head">
+          <span class="filter-block-name">Size</span>
+          <span class="filter-block-arrow">▼</span>
+        </div>
+        <div class="filter-block-body">
+          <div class="size-btn-grid" id="size-filter-btns">
+            <button class="sfbtn active" data-size="">All</button>
+            <button class="sfbtn" data-size="XS">XS</button>
+            <button class="sfbtn" data-size="S">S</button>
+            <button class="sfbtn" data-size="M">M</button>
+            <button class="sfbtn" data-size="L">L</button>
+            <button class="sfbtn" data-size="XL">XL</button>
+            <button class="sfbtn" data-size="XXL">XXL</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Price -->
+      <div class="filter-block" id="fb-price">
+        <div class="filter-block-head">
+          <span class="filter-block-name">Price</span>
+          <span class="filter-block-arrow">▼</span>
+        </div>
+        <div class="filter-block-body">
+          <div class="filter-radio-list">
+            <label class="fradio"><input type="radio" name="price" value="" checked /><span
+                class="fradio-dot"></span><span class="fradio-label">Any Price</span></label>
+            <label class="fradio"><input type="radio" name="price" value="0-1500" /><span
+                class="fradio-dot"></span><span class="fradio-label">Under Nu. 1,500</span></label>
+            <label class="fradio"><input type="radio" name="price" value="1500-2000" /><span
+                class="fradio-dot"></span><span class="fradio-label">Nu. 1,500 – 2,000</span></label>
+            <label class="fradio"><input type="radio" name="price" value="2000-9999" /><span
+                class="fradio-dot"></span><span class="fradio-label">Above Nu. 2,000</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Availability -->
+      <div class="filter-block" id="fb-stock">
+        <div class="filter-block-head">
+          <span class="filter-block-name">Availability</span>
+          <span class="filter-block-arrow">▼</span>
+        </div>
+        <div class="filter-block-body">
+          <div class="filter-radio-list">
+            <label class="fradio"><input type="radio" name="stock" value="" checked /><span
+                class="fradio-dot"></span><span class="fradio-label">All Items</span></label>
+            <label class="fradio"><input type="radio" name="stock" value="instock" /><span
+                class="fradio-dot"></span><span class="fradio-label">In Stock Only</span></label>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN CATALOG -->
+    <main class="shop-main">
+      <!-- Top bar: count + sort + mobile filter toggle -->
+      <div class="shop-topbar">
+        <span class="results-txt" id="results-txt"></span>
+        <div class="shop-topbar-right">
+          <button class="mobile-filter-btn" id="mobile-filter-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="16" y2="12" />
+              <line x1="4" y1="18" x2="12" y2="18" />
+            </svg>
+            Filters
+            <span class="mobile-badge" id="mobile-badge"></span>
+          </button>
+          <select id="sort-sel" class="sort-sel">
+            <option value="default">Sort: Default</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="discount">Biggest Discount</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Active filter pills -->
+      <div class="active-filters" id="active-filters" style="display:none;"></div>
+
+      <div class="shop-grid" id="shop-grid"></div>
+
+      <div class="shop-empty" id="shop-empty" style="display:none;">
+        <div style="font-size:48px;margin-bottom:16px;opacity:.3;">⚽</div>
+        <h3 style="font-family:var(--font-h);font-size:28px;margin-bottom:8px;">No kits found</h3>
+        <p style="color:var(--ink-3);margin-bottom:24px;">Try adjusting your filters or search term.</p>
+        <button class="btn-dark" id="empty-reset">Clear All Filters</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div class="detail-bg" id="detail-bg">
+    <div class="detail-box" id="detail-box">
+      <button class="detail-x" id="detail-x">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="detail-layout">
+        <div class="detail-img-col">
+          <div class="detail-img-frame">
+            <img id="d-img" src="" alt="" loading="lazy" />
+            <div id="d-tags"></div>
+          </div>
+        </div>
+        <div class="detail-info-col">
+          <p class="d-league" id="d-league"></p>
+          <p class="d-team" id="d-team"></p>
+          <h2 class="d-name" id="d-name"></h2>
+          <div class="d-price-row" id="d-price"></div>
+          <p class="d-desc" id="d-desc"></p>
+
+          <div class="d-size-section">
+            <div class="d-size-top">
+              <span class="d-size-label">Select Size</span>
+              <button class="size-guide-btn" id="d-size-guide">Size Guide ↗</button>
+            </div>
+            <div class="d-sizes" id="d-sizes"></div>
+          </div>
+
+          <button class="btn-wa d-wa-btn" id="d-wa-btn" disabled>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Order on WhatsApp
+          </button>
+          <button class="btn-add-cart" id="d-cart-btn" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+            Add to Cart
+          </button>
+          <button class="btn-notify-detail" id="d-notify-btn" style="display:none;">
+            🔔 Notify Me When Back in Stock
+          </button>
+
+          <!-- Sticky order bar (mobile) -->
+          <div class="sticky-bar" id="sticky-bar" style="display:none;">
+            <div class="sticky-bar-info">
+              <span id="sb-name"></span>
+              <span class="sb-price" id="sb-price"></span>
+            </div>
+            <button class="btn-wa" id="sb-btn" style="padding:10px 18px;font-size:12px;">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Order Now
+            </button>
+          </div>
+
+          <div class="d-share-row">
+            <span class="d-share-label">Share:</span>
+            <button class="d-share-btn" id="d-share-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Share on WhatsApp
+            </button>
+          </div>
+          <div class="d-meta">
+            <span>SKU: <b id="d-sku"></b></span>
+            <span>Stock: <b id="d-stock"></b></span>
+          </div>
+        </div>
+      </div>
+      <!-- Related -->
+      <div class="related-section" id="related-section">
+        <h3 class="related-h3">You May Also Like</h3>
+        <div class="related-row" id="related-row"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIZE GUIDE -->
+  <div class="sg-bg" id="sg-bg">
+    <div class="sg-box">
+      <div class="sg-top">
+        <h3 class="sg-title">Size Guide</h3>
+        <button class="sg-x" id="sg-x">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <p class="sg-note">All measurements in <strong>centimetres (cm)</strong>. Measure your chest at the widest point.
+      </p>
+      <table class="sg-tbl">
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Chest</th>
+            <th>Height</th>
+            <th>Waist</th>
+            <th>Fit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="sz-key">XS</td>
+            <td>84–88</td>
+            <td>160–165</td>
+            <td>70–74</td>
+            <td>Slim</td>
+          </tr>
+          <tr>
+            <td class="sz-key">S</td>
+            <td>88–92</td>
+            <td>165–170</td>
+            <td>74–78</td>
+            <td>Slim</td>
+          </tr>
+          <tr>
+            <td class="sz-key">M</td>
+            <td>92–98</td>
+            <td>170–176</td>
+            <td>78–84</td>
+            <td>Regular</td>
+          </tr>
+          <tr>
+            <td class="sz-key">L</td>
+            <td>98–104</td>
+            <td>176–182</td>
+            <td>84–90</td>
+            <td>Regular</td>
+          </tr>
+          <tr>
+            <td class="sz-key">XL</td>
+            <td>104–112</td>
+            <td>182–188</td>
+            <td>90–98</td>
+            <td>Regular</td>
+          </tr>
+          <tr>
+            <td class="sz-key">XXL</td>
+            <td>112–120</td>
+            <td>188–194</td>
+            <td>98–106</td>
+            <td>Relaxed</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="sg-tips">
+        <div class="sg-tip"><span>📏</span>
+          <div><strong>Between sizes?</strong> Size up for a comfortable match-day feel.</div>
+        </div>
+        <div class="sg-tip"><span>🧺</span>
+          <div><strong>Washing:</strong> Cold wash, hang dry, inside out.</div>
+        </div>
+        <div class="sg-tip"><span>💬</span>
+          <div><strong>Still unsure?</strong> <a class="sg-wa-link" id="sg-wa" href="#">Ask us on WhatsApp</a>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <div class="footer-logo-name">Bhutan Hype</div>
+          <div class="footer-tagline">Wear the Legend</div>
+        </div>
+        <p class="footer-desc">Premium football jerseys delivered across Bhutan. Order via WhatsApp for fast, personal
+          service.</p>
+        <a class="footer-wa" id="footer-wa" href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          WhatsApp Us
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4><a href="shop.html">All Kits</a><a href="shop.html?filter=new">New Arrivals</a><a
+          href="shop.html?filter=sale">On Sale</a>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4><a href="faq.html">FAQ</a><a href="faq.html#size-guide">Size Guide</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4><a href="#" id="footer-wa2">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Bhutan Hype.</span><span>Built for the beautiful game.</span></div>
+  </footer>
+
+  <!-- CART -->
+  <div class="cart-overlay" id="cart-overlay">
+    <div class="cart-drawer">
+      <div class="cart-head">
+        <h3>Your Cart</h3>
+        <button class="cart-x" id="cart-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" width="16" height="16">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="cart-body" id="cart-body">
+        <div class="cart-empty-state">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+          <p>Your cart is empty</p>
+        </div>
+      </div>
+      <div class="cart-foot" id="cart-foot" style="display:none;">
+        <div class="cart-total"><span>Subtotal</span><span class="cart-total-val" id="cart-total">Nu. 0</span></div>
+        <p class="cart-ship" id="cart-ship"></p>
+        <button class="btn-wa" id="cart-wa-btn"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>Order All on WhatsApp</button>
+        <button class="btn-clear" id="cart-clear">Clear cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- WA BUBBLE -->
+  <div class="wa-wrap">
+    <div class="wa-tip" id="wa-tip"><span>Need help?</span><button class="wa-tip-x" id="wa-tip-x">✕</button></div>
+    <a class="wa-fab" id="wa-fab" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+      <span class="wa-ring"></span>
+    </a>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="products.js"></script>
+  <script src="shared.js"></script>
+  <script src="shop.js"></script>
+</body>
+
+</html>

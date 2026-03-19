@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ & Size Guide — Bhutan Hype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="faq.css" />
+</head>
+
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5" fill="none" />
+            <path d="M12 2a10 10 0 0 1 6.32 17.45M5.68 4.55A10 10 0 0 1 12 2" stroke="white" stroke-width="1.5"
+              fill="none" />
+          </svg>
+        </div>
+        <span class="logo-name">Bhutan Hype</span>
+      </a>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="faq.html" class="nav-link active">FAQ</a>
+      </nav>
+      <div class="header-right">
+        <button class="cart-btn" id="cart-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="faq-hero">
+    <div class="faq-hero-inner">
+      <div class="section-label">Help Centre</div>
+      <h1 class="faq-hero-title">Questions &amp;<br />Answers</h1>
+      <p class="faq-hero-sub">Everything you need to know before ordering. Still have a question? <a
+          class="faq-wa-inline" id="faq-wa-inline" href="#">Message us on WhatsApp.</a></p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="faq-layout">
+
+    <!-- STICKY NAV -->
+    <nav class="faq-nav">
+      <h3 class="faq-nav-title">On this page</h3>
+      <a href="#ordering" class="faq-nav-link">Ordering</a>
+      <a href="#delivery" class="faq-nav-link">Delivery</a>
+      <a href="#products" class="faq-nav-link">Products</a>
+      <a href="#returns" class="faq-nav-link">Returns</a>
+      <a href="#size-guide" class="faq-nav-link">Size Guide</a>
+      <a href="#contact" class="faq-nav-link">Contact</a>
+    </nav>
+
+    <div class="faq-content">
+
+      <!-- ORDERING -->
+      <section class="faq-group" id="ordering">
+        <h2 class="faq-group-title">Ordering</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">How do I place an order? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">
+              <p>Tap "Order on WhatsApp" on any jersey, select your size, and a pre-filled message opens in WhatsApp.
+                Send it, and we'll confirm your order, check stock, and arrange delivery — all through WhatsApp. It
+                takes less than 2 minutes.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Can I order multiple jerseys at once? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">
+              <p>Yes! Add items to your cart using the "Add to Cart" button, then tap "Order All on WhatsApp" from the
+                cart. We'll receive a single message with your full order and handle everything in one conversation.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">What payment methods do you accept? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">
+              <p>Cash on delivery for Thimphu orders. For outstation, we accept mBoB, BNB Pay, or bank transfer before
+                dispatch. Payment details are shared when you confirm your order on WhatsApp.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Can you source jerseys not listed on the site? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">
+              <p>Absolutely. We can source almost any club or national team jersey. Message us on WhatsApp with the
+                team, season, and kit type (home/away/third) and we'll check availability and pricing for you.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Do you do custom name and number printing? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">
+              <p>Yes! We offer custom name and number printing on most jerseys for an additional charge. Message us with
+                the name, number, font style, and jersey — we'll get back to you with pricing and turnaround time
+                (typically 2–3 extra days).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DELIVERY -->
+      <section class="faq-group" id="delivery">
+        <h2 class="faq-group-title">Delivery</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">How long does delivery take? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">
+              <p>Within Thimphu: 1–2 days. Other dzongkhags: 3–5 days via domestic courier. We confirm the exact
+                timeline when you order. For urgent orders, let us know and we'll do our best to prioritise.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Do you deliver outside Thimphu? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">
+              <p>Yes — we deliver nationwide across all 20 dzongkhags. Delivery charges may apply. Message us with your
+                location and we'll confirm availability and cost before you pay.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Is there free delivery? <span class="faq-plus">+</span></button>
+            <div class="faq-a">
+              <p>Yes! Orders above Nu. 2,000 qualify for free delivery within Thimphu. For outstation orders, free
+                delivery may apply on larger orders — ask us on WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section class="faq-group" id="products">
+        <h2 class="faq-group-title">Products</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Are these original / authentic jerseys? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">
+              <p>Yes. All our jerseys are premium player-grade quality with authentic club crests, official sponsor
+                logos, and professional fabric — the same quality worn by players. We source from trusted suppliers and
+                don't sell counterfeits.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">How do I care for my jersey? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">
+              <p>Machine wash cold (30°C max) on a gentle cycle. Do not tumble dry — hang dry in the shade. Do not iron
+                directly on crests or printed areas. Turn inside out before washing to preserve colours and badge
+                quality.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">A jersey I want is out of stock — what do I do? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">
+              <p>Click "Notify Me When Back in Stock" on the product page. It opens WhatsApp with a pre-filled message.
+                We'll contact you as soon as it's available again. We also restock popular jerseys regularly, so check
+                back weekly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RETURNS -->
+      <section class="faq-group" id="returns">
+        <h2 class="faq-group-title">Returns &amp; Exchanges</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Can I exchange if the size is wrong? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">
+              <p>Yes — size exchanges within 7 days of delivery, as long as the jersey is unworn and in its original
+                condition. Message us on WhatsApp and we'll arrange the swap. We recommend using our Size Guide below
+                before ordering to get the right fit first time.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">What if I receive the wrong item? <span
+                class="faq-plus">+</span></button>
+            <div class="faq-a">
+              <p>We're sorry if that happens! Message us immediately on WhatsApp with a photo and we'll send the correct
+                item as soon as possible at no extra charge.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SIZE GUIDE -->
+      <section class="faq-group" id="size-guide">
+        <h2 class="faq-group-title">Size Guide</h2>
+        <p class="sg-intro">All measurements in <strong>centimetres (cm)</strong>. Measure your chest at the widest
+          point with arms relaxed at your sides.</p>
+        <div class="sg-table-wrap">
+          <table class="sg-full-table">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Chest (cm)</th>
+                <th>Height (cm)</th>
+                <th>Waist (cm)</th>
+                <th>Fit Type</th>
+                <th>Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="sz-key">XS</td>
+                <td>84–88</td>
+                <td>160–165</td>
+                <td>70–74</td>
+                <td>Slim</td>
+                <td>Slim/lean build</td>
+              </tr>
+              <tr>
+                <td class="sz-key">S</td>
+                <td>88–92</td>
+                <td>165–170</td>
+                <td>74–78</td>
+                <td>Slim</td>
+                <td>Slim build</td>
+              </tr>
+              <tr>
+                <td class="sz-key">M</td>
+                <td>92–98</td>
+                <td>170–176</td>
+                <td>78–84</td>
+                <td>Regular</td>
+                <td>Average build</td>
+              </tr>
+              <tr>
+                <td class="sz-key">L</td>
+                <td>98–104</td>
+                <td>176–182</td>
+                <td>84–90</td>
+                <td>Regular</td>
+                <td>Average/athletic</td>
+              </tr>
+              <tr>
+                <td class="sz-key">XL</td>
+                <td>104–112</td>
+                <td>182–188</td>
+                <td>90–98</td>
+                <td>Regular</td>
+                <td>Broader/taller</td>
+              </tr>
+              <tr>
+                <td class="sz-key">XXL</td>
+                <td>112–120</td>
+                <td>188–194</td>
+                <td>98–106</td>
+                <td>Relaxed</td>
+                <td>Larger/relaxed fit</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sg-advice">
+          <div class="sg-advice-card">
+            <span class="sg-advice-icon">📏</span>
+            <div><strong>Between sizes?</strong> We always recommend sizing up for a more comfortable, authentic
+              match-day feel. Football jerseys are designed to be slightly loose.</div>
+          </div>
+          <div class="sg-advice-card">
+            <span class="sg-advice-icon">🧒</span>
+            <div><strong>Ordering for kids?</strong> Message us with your child's age and height and we'll recommend the
+              right size — we carry youth sizes on some kits.</div>
+          </div>
+          <div class="sg-advice-card">
+            <span class="sg-advice-icon">💬</span>
+            <div><strong>Still not sure?</strong> <a class="faq-wa-inline" id="sg-wa-link" href="#">Ask us on
+                WhatsApp</a> with your measurements and we'll tell you exactly which size to order.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="faq-group" id="contact">
+        <h2 class="faq-group-title">Still Need Help?</h2>
+        <div class="contact-card">
+          <div class="contact-icon">💬</div>
+          <div>
+            <h3>Chat with us on WhatsApp</h3>
+            <p>We reply within a few hours. Ask about sizing, availability, custom orders, delivery — anything.</p>
+            <a class="btn-wa contact-wa-btn" id="contact-wa" href="#">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Start a Chat
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <div class="footer-logo-name">Bhutan Hype</div>
+          <div class="footer-tagline">Wear the Legend</div>
+        </div>
+        <p class="footer-desc">Premium football jerseys delivered across Bhutan.</p>
+        <a class="footer-wa" id="footer-wa" href="#"><svg viewBox="0 0 24 24" fill="currentColor" width="14"
+            height="14">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>WhatsApp Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4><a href="shop.html">All Kits</a><a href="shop.html?filter=new">New Arrivals</a>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4><a href="faq.html">FAQ</a><a href="faq.html#size-guide">Size Guide</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4><a href="#" id="footer-wa2">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Bhutan Hype.</span><span>Built for the beautiful game.</span></div>
+  </footer>
+
+  <!-- CART -->
+  <div class="cart-overlay" id="cart-overlay">
+    <div class="cart-drawer">
+      <div class="cart-head">
+        <h3>Your Cart</h3><button class="cart-x" id="cart-close"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" width="16" height="16">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="cart-body" id="cart-body">
+        <div class="cart-empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            width="48" height="48">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+          <p>Your cart is empty</p>
+        </div>
+      </div>
+      <div class="cart-foot" id="cart-foot" style="display:none;">
+        <div class="cart-total"><span>Subtotal</span><span class="cart-total-val" id="cart-total">Nu. 0</span></div>
+        <p class="cart-ship" id="cart-ship"></p>
+        <button class="btn-wa" id="cart-wa-btn"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>Order All on WhatsApp</button>
+        <button class="btn-clear" id="cart-clear">Clear cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- WA BUBBLE -->
+  <div class="wa-wrap">
+    <div class="wa-tip" id="wa-tip"><span>Need help?</span><button class="wa-tip-x" id="wa-tip-x">✕</button></div><a
+      class="wa-fab" id="wa-fab" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"
+        width="26" height="26">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg><span class="wa-ring"></span></a>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="products.js"></script>
+  <script src="shared.js"></script>
+  <script src="faq.js"></script>
+</body>
+
+</html>

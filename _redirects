@@ -1,0 +1,11 @@
+# Netlify Routing Rules for KITKING
+# This file tells Netlify how to handle URL routing.
+
+# Serve index.html for the root
+/           /index.html   200
+
+# Admin panel — direct access only (no link from store)
+/admin      /admin.html   200
+
+# Fallback — any unmatched URL goes to index
+/*          /index.html   404
